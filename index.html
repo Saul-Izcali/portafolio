@@ -8,17 +8,33 @@
     <link rel="snortcut icon" href="img/s.png" type="image/x-icon"> 
     <link rel="stylesheet" href="css/estilos.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="dist/hamburgers.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div id="conexionInternet"><!-- <P>Estado de la conexion</P> --></div>
 
+        <div class="div-hamburger"  id="icon">
+            <label class="iconoHamburger">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </label> 
+        </div>
+
+<!--           
+        <div class="div-hamburger">
+            <label class="icono-cerrar-visto" id="iconoCerrar">
+                <i class="fas fa-times"></i>
+            </label> 
+        </div>  -->
         <nav >
-            <a href="#sobre-mi">Quién soy</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#ofrecer">Que ofrezco</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
+            <div id="menu" class="oculto">
+                <a href="#sobre-mi" class="enlace-seccion">Quién soy</a>
+                <a href="#habilidades" class="enlace-seccion">Habilidades</a>
+                <a href="#ofrecer" class="enlace-seccion">Cualidades</a>
+                <a href="#proyectos" class="enlace-seccion">Proyectos</a>
+                <a href="#contacto" class="enlace-seccion">Contacto</a>
+            </div>
         </nav>
         
         <section class="text-header">
@@ -51,7 +67,6 @@
             <div class="habilidades-contenido">
                 <div class="habilidades-elemento">
                     <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="" class="img-habilidades">
-                    <!-- <img src="img/html.jpg" alt="" class="img-habilidades"> -->
                     <h4>html</h4>
                 </div>
                 <div class="habilidades-elemento">
@@ -86,8 +101,8 @@
         </section>
 
         <br>
-        <section class="contenedor ofrecer" id="ofrecer">
-            <h2 class="titulo">Que ofrezco</h2>
+        <section class="ofrecer" id="ofrecer">
+            <h2 class="titulo">Cualidades principales</h2>
                 <div class="ofrecer-contenido">
                     <div class="ofrecer-elemento">
                         <img src="img/undraw_team_collaboration_re_ow29.svg" alt="" class="img-ofrecer">
@@ -111,8 +126,8 @@
                         <h4>Empatía</h4>
                     </div>
                     <div class="ofrecer-elemento">
-                        <img src="" alt="" class="img-ofrecer">
-                        <h4>Otro</h4>
+                        <img src="img/undraw_inspiration_re_ivlv.svg" alt="" class="img-ofrecer">
+                        <h4>Capacidad de adaptarse a nuevas tecnologías, metodologías y equipos</h4>
                     </div>
                 </div>
         </section>
@@ -126,7 +141,7 @@
                         <div class="hover-proyectos">
                             <div class="imagenes-enlaces-proyectos">
                                 <a  href="https://pwa-maphop.web.app/"><img src="https://cdn-icons-png.flaticon.com/512/93/93618.png" alt="Visitar" title="Visitar"></a> 
-                                <a href="https://github.com/Saul-Izcali/Arduino"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="Repositorio"></a> 
+                                <a href="https://github.com/Saul-Izcali/MapHop-Frontend"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="Repositorio"></a> 
                             </div>
                             <div class="descripcion-proyecto">
                                 <h5>Map Hop</h5>
@@ -138,7 +153,7 @@
                         <img src="img/horariosDocentes.png" alt="">
                         <div class="hover-proyectos">
                             <div class="imagenes-enlaces-proyectos">
-                                <a href="https://github.com/Saul-Izcali/Arduino"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="Repositorio"></a> 
+                                <a href="https://github.com/Saul-Izcali/Permisos-Docentes"><img src="https://cdn-icons-png.flaticon.com/512/733/733609.png" alt="GitHub" title="Repositorio"></a> 
                             </div>
                             <div class="descripcion-proyecto">
                                 <h5>Permisos Docentes</h5>
@@ -155,9 +170,9 @@
                 <div class="contactame-contenido">
                     <div class="formulario-correo">
                         <form id="form-correo" action="https://formspree.io/f/xbjworba" method="POST">
-                            <h3>Enviame un correo</h3>
+                            <h3>Si quieres ponerte en contacto conmigo puedes enviarme un correo con este formulario</h3>
                             <input type="text" name="nombre" id="" placeholder="Nombre" class="input-text-normal" required>
-                            <input type="email" name="email" id="" placeholder="Dirección" class="input-text-normal" required>
+                            <input type="email" name="email" id="" placeholder="Tu dirección de correo" class="input-text-normal" required>
                             <input type="text" name="message" placeholder="Mensaje" class="comentario" required>
                             <input type="submit" value="Enviar" class="btn-enviar">
                         </form>

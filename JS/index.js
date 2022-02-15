@@ -3,6 +3,8 @@ import Conexion from "./OnOffLine.js";
 import Animaciones from "./Animaciones.js";
 
 var form = document.getElementById("form-correo");
+let menu = document.getElementById("icon")
+let activo = false;
 
 document.addEventListener("DOMContentLoaded", (e) => {
     Conexion();
@@ -12,6 +14,25 @@ window.addEventListener("scroll",(e)=>{
     Animaciones();
     RegresarArriba();
 });
+
+document.addEventListener('click', (e) => {
+    if(e.target.matches("i#menuIcon.fas.fa-bars")){
+        if(activo){
+            document.getElementById("menu").className = "visto"
+            // document.getElementById("iconoCerrar").className = ".icono-cerrar-visto"
+            activo = false;
+        }else{
+            console.log("entro")
+            document.getElementById("menu").className = "oculto"
+            // document.getElementById("iconoCerrar").className = ".icono-cerrar-oculto"
+            activo = true;
+        }
+    }
+    if(e.target.matches('a.enlace-seccion')){
+        document.getElementById("menu").className = "oculto"
+    }
+
+})
 
 form.addEventListener('submit', Correo);
 
